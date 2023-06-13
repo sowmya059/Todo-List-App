@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="tab">
+        <button class="tablinks" onclick="opentab(event, 'Notification')">Notification</button>
+        <button class="tablinks" onclick="opentab(event, 'todo')">Todo</button>
+        
+      </div>
+    <div class="container">
+      <div id="new-task">
+        <input type="text" placeholder="Enter The Task Here..." />
+       <!--- <button id="push" onclick="toggleClass()">Add Task</button>-->
+        <input onclick="change()" type="button" value="Add task" id="push"></input>
+       <!--<div><input type="text" placeholder="update task"/>
+            <button id ="update">Update</button></div> -->
+      </div>
+
+      <div id="tasks"></div>
+    </div>
+    <header>
+        <h1>TO-DO LIST</h1>
+    </header>
+    
+    <script src="index.js">
+    
+    </script>
+  </body>
+</html>
