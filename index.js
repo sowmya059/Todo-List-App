@@ -80,26 +80,17 @@ const displayTasks = () => {
       //Stop propogation to outer elements (if removed when we click delete eventually rhw click will move to parent)
       e.stopPropagation();
       //disable other edit buttons when one task is being edited
-      disableButtons(true);
-      function change() // no ';' here
-{
-    var elem = document.getElementById("push");
-    if (elem.value=="Add Task") elem.value = "Update task";
-    else elem.value = "update task";
-    elem.innerText='update task';
-}
-
-
-
-
-
-
-
-
-
-
-      
+      disableButtons(true);   
       //update input value and remove div
+      function togggleClass()
+  {
+      var elem = document.getElementById("push");
+      if (elem.value=="Add Task") elem.value = "update task";
+      else elem.value = "update task";
+      elem.textContent="update task";
+  }
+  togggleClass()
+ // btn.textContent="Add Task"
       let parent = element.parentElement;
       newTaskInput.value = parent.querySelector("#taskname").innerText;
       //set updateNote to the task that is being edited
@@ -108,6 +99,7 @@ const displayTasks = () => {
       parent.remove();
     });
   });
+   btn.textContent="Add Task"
 
   //Delete Tasks
   deleteTasks = document.getElementsByClassName("delete");
@@ -183,4 +175,3 @@ document.querySelector("#push").addEventListener("click", () => {
     newTaskInput.value = "";
   }
 });
-
